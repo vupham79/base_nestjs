@@ -11,12 +11,19 @@ export class UsersService {
   ) {}
 
   async findAll(): Promise<User[]> {
-    return await this.UserRepository.findAll<User>();
+    return await this.UserRepository.findAll<User>({
+      attributes: {
+        exclude: ['password'],
+      },
+    });
   }
 
   async findOneById(id: number): Promise<User> {
     return await this.UserRepository.findOne<User>({
       where: { id },
+      attributes: {
+        exclude: ['password'],
+      },
     });
   }
 
