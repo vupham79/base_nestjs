@@ -2,11 +2,22 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
-## Generate controller
+## Create New Model
 
-```bash
-$ nest g controller [model_name]
-```
+### Post Module
+Run ```$ nest g module /modules/posts ```
+This will automatically add this module to our root module AppModule.
+
+### Generate Post Service
+Run ```$ nest g service /modules/posts ```
+This will automatically add this service to the Post module.
+
+### Generate Post Controller
+Run ```$ nest g co /modules/posts ```
+This will automatically add this controller to the Post module.
+
+### Post Entity
+Create a post.entity.ts file inside the posts folder.
 
 ## Installation
 
